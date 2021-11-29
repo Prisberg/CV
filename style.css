@@ -1,0 +1,26 @@
+/* scroll snap, snap to containers when scrolling */
+html, body {
+    scroll-snap-type: y proximity;
+   }
+   @media (min-width: 1025px) {
+    html, body {
+    scroll-padding: 80px;
+    }
+   }
+   .scroll-snap {
+    scroll-snap-align: start;
+   }
+
+.navbar {
+    z-index: 2;
+}
+
+.title {
+    margin-top: 6rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.no-padding {
+    padding: 0;
+}
