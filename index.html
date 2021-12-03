@@ -7,55 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script defer src="main.js"></script>
+    <script defer src="script.js"></script>
     <title>Philip Risberg</title>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top nav-padding">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
         <div class="container-fluid">
             <a href="#" class="navbar-brand w-50"><img class="img-fluid" src="/images/logo.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <!-- change icon -->
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navmenu">
+            <div class="collapse navbar-collapse " id="navmenu">
+                <!-- bootstrap nav with @prisberg nav links "section-indicator" -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item ms-auto">
-                        <a href="#" class="nav-link">My CV</a>
+                        <a href="#" class="section-indicator current-section">Start</a>
                     </li>
                     <li class="nav-item ms-auto">
-                        <a href="#" class="nav-link">My CV</a>
+                        <a href="#" class="section-indicator">My CV</a>
                     </li>
                     <li class="nav-item ms-auto">
-                        <a href="#" class="nav-link">My CV</a>
+                        <a href="#" class="section-indicator">My CV</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container title">
-        <h1>Front End Developer</h1>
-        <h2>PHILIP RISBERG</h2>
+    <!-- Vertical slide website layout -->
+    <div class="slide">
+        <!-- Seperates sections from buttons -->
+        <div class="slide__section-seperator">
+            <!-- contains "slide-section" which in turn contain "content" -->
+            <ul class="section-container">
+                <li class="slide-section">
+                    <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
+                </li>
+                <li class="slide-section">
+                    <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
+                </li>
+                <li class="slide-section">
+                    <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="buttons-div">
+            <button type="button" class="btn btn-dark slide-button">
+                <span class="bi bi-caret-up-fill"></span>
+            </button>
+            <button type="button" class="btn btn-dark slide-button">
+                <span class="bi bi-caret-down-fill"></span>
+            </button>
+        </div>
     </div>
-    <div style="height: 100vh;" class="container-fluid no-padding bg-dark scroll-snap content">
-        <span>text</span>
-    </div>
-    <div style="height: 100vh;" class="container-fluid no-padding scroll-snap">
-        <span>text</span>
-    </div>
-    <div style="height: 100vh;" class="container-fluid no-padding bg-dark scroll-snap">
-        <span>text</span>
-    </div>
-    <!-- Work title -->
-    <!-- Name -->
-    <!-- Image -->
-    <!-- Next section button -->
-    <!-- to be continued -->
+
 </body>
 
 </html>
