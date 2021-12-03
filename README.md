@@ -1,3 +1,6 @@
+# CV
+Curriculum vitae
+
 Laboration 2 CV
 Uppgiften är att skapa ett interaktivt CV som presenterar mig och mina kunskaper för framtida arbetsgivare. 
 Sidan ska vara responsiv och javascript ska användas för att skapa rörelse och interaktivitet.
