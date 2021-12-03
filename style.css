@@ -1,13 +1,17 @@
+.indicator-container {
+    max-width: 4rem;
+}
+
 /* nav link styling to indicate active section */
 .section-indicator {
     text-decoration: none;
-    color: rgba(0, 0, 0, .3);
+    color: rgba(0, 0, 0, .7);
     font-size: 1.2rem;
 }
 
-/* the section-indicator with this class shows which section is being viewed. */
+/* the section-indicator with this class shows which section is being viewed.*/ 
 .section-indicator.current-section {
-    color: rgba(0, 0, 0, .75);
+    background: rgba(255, 0, 0, 0.75);
 }
 
 /* website layout container */
@@ -32,6 +36,7 @@
     padding: 0;
     margin:0;
     list-style: none;
+    transition: transform 250ms ease-in;
 }
 /* list item setting size for div */
 .slide-section {
@@ -54,8 +59,16 @@
 }
 
 /* position the buttons */
-.buttons-div {
-    position: absolute;
+.slide-button-up {
+    position: fixed;
+    top: 20%;
+    z-index: 100;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide-button-down {
+    position: fixed;
     bottom: 0%;
     z-index: 100;
     margin-left: 50%;
@@ -63,6 +76,6 @@
 }
 
  /*bootstrap icons*/
-.bi {
-    font-size: 3rem;
-}
+.bi {font-size: 3rem;}
+
+.is-hidden {display: none;}

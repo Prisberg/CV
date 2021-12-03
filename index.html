@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top">
         <div class="container-fluid">
@@ -25,17 +26,17 @@
                 <!-- change icon -->
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navmenu">
+            <div class="collapse navbar-collapse" id="navmenu">
                 <!-- bootstrap nav with @prisberg nav links "section-indicator" -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item ms-auto">
-                        <a href="#" class="section-indicator current-section">Start</a>
+                <ul class="navbar-nav ms-auto indicator-container">
+                    <li class="nav-item ">
+                        <a href="#" class="link-dark section-indicator current-section">Start</a>
                     </li>
-                    <li class="nav-item ms-auto">
-                        <a href="#" class="section-indicator">My CV</a>
+                    <li class="nav-item">
+                        <a href="#" class="link-dark section-indicator">My CV</a>
                     </li>
-                    <li class="nav-item ms-auto">
-                        <a href="#" class="section-indicator">My CV</a>
+                    <li class="nav-item">
+                        <a href="#" class="link-dark section-indicator">My CV</a>
                     </li>
                 </ul>
             </div>
@@ -43,29 +44,28 @@
     </nav>
     <!-- Vertical slide website layout -->
     <div class="slide">
+        <button type="button" class="btn btn-dark slide-button-up is-hidden">
+            <span class="bi bi-caret-up-fill"></span>
+        </button>
         <!-- Seperates sections from buttons -->
         <div class="slide__section-seperator">
             <!-- contains "slide-section" which in turn contain "content" -->
             <ul class="section-track">
-                <li class="slide-section">
+                <li class="slide-section current-section">
                     <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
                 </li>
                 <li class="slide-section">
-                    <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
+                    <div class="content"><img class="image" src="/images/test2.jpg" alt="test2"></div>
                 </li>
                 <li class="slide-section">
                     <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
                 </li>
             </ul>
         </div>
-        <div class="buttons-div">
-            <button type="button" class="btn btn-dark slide-button">
-                <span class="bi bi-caret-up-fill"></span>
-            </button>
-            <button type="button" class="btn btn-dark slide-button">
-                <span class="bi bi-caret-down-fill"></span>
-            </button>
-        </div>
+        <button type="button" class="btn btn-dark slide-button-down">
+            <span class="bi bi-caret-down-fill"></span>
+        </button>
+    </div>
     </div>
 
 </body>
