@@ -64,12 +64,13 @@ nextButton.addEventListener('click', e => {
 /*Active nav-links get styling*/
 const updateIndicator = (currentLink, targetLink) => {
     currentLink.classList.remove('current-section');
-    targetLink.firstChild.classList.add('current-section');
+    targetLink.classList.add('current-section');
 }
 
 /* when i click the nav-links, move to selected section */
 navIndicator.addEventListener('click', e => {
-    const targetLink = e.target.closest('.nav-item');
+    const targetLink = e.target.closest('.section-indicator');
+
 
     if (!targetLink) return;
 
@@ -82,3 +83,5 @@ navIndicator.addEventListener('click', e => {
     updateIndicator(currentLink, targetLink);
     hideShowArrows(section, prevButton, nextButton, targetIndex)
 })
+
+
