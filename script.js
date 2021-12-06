@@ -21,7 +21,7 @@ const moveToSection = (track, currentSection, targetSection) => {
     currentSection.classList.remove('current-section');
     targetSection.classList.add('current-section')
 }
-/* funkar bara via länkarna atm */
+/* hide arrows funkar bara via länkarna atm */
 const hideShowArrows = (section, prevButton, nextButton, targetIndex) => {
     if (targetIndex === 0) {
         prevButton.classList.add('is-hidden');
@@ -44,7 +44,7 @@ prevButton.addEventListener('click', e => {
     const prevIndex = section.findIndex(section => section === prevSection)
 
     moveToSection(track, currentSection, prevSection);
-    updateIndicator(currentLink, nextLink);
+    updateIndicator(currentLink, prevLink);
     hideShowArrows(section, prevButton, nextButton, prevIndex)
 })
 
@@ -61,10 +61,10 @@ nextButton.addEventListener('click', e => {
     hideShowArrows(section, prevButton, nextButton, nextIndex)
 
 })
-/*vill att länkarna ska få styling  */
+/*Active nav-links get styling*/
 const updateIndicator = (currentLink, targetLink) => {
-    currentLink.classList.remove('.current-section');
-    targetLink.classList.add('.current-section');
+    currentLink.classList.remove('current-section');
+    targetLink.firstChild.classList.add('current-section');
 }
 
 /* when i click the nav-links, move to selected section */
