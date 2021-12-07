@@ -5,10 +5,9 @@ const prevButton = document.querySelector('.slide-button-up');
 const navIndicator = document.querySelector('.indicator-container');
 const indicator = Array.from(navIndicator.children);
 
-/* behövs för att functionen vet hur långt ner den ska scrolla */
+/* för att functionen ska veta hur långt ner den ska scrolla */
 const sectionHeight = section[0].getBoundingClientRect().height;
 
-/* lista ut ner och upp ist för arrange sideways */
 const setSectionPosition = (section, index) => {
     section.style.top = sectionHeight * index + 'px';
 };
@@ -21,7 +20,7 @@ const moveToSection = (track, currentSection, targetSection) => {
     currentSection.classList.remove('current-section');
     targetSection.classList.add('current-section')
 }
-/* hide arrows funkar bara via länkarna atm */
+/* hide arrows */
 const hideShowArrows = (section, prevButton, nextButton, targetIndex) => {
     if (targetIndex === 0) {
         prevButton.classList.add('is-hidden');
@@ -59,8 +58,41 @@ nextButton.addEventListener('click', e => {
     moveToSection(track, currentSection, nextSection);
     updateIndicator(currentLink, nextLink);
     hideShowArrows(section, prevButton, nextButton, nextIndex)
-
 })
+
+/* Experimental scrolljacking)
+var lastScrollTop = 0;
+
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+   if (st > lastScrollTop){
+        /*downscroll code here 
+        const currentSection = track.querySelector('.current-section');
+        const nextSection = currentSection.nextElementSibling;
+        const currentLink = navIndicator.querySelector('.current-section')
+        const nextLink = currentLink.nextElementSibling;
+        const nextIndex = section.findIndex(section => section === nextSection)
+
+        moveToSection(track, currentSection, nextSection);
+        updateIndicator(currentLink, nextLink);
+        hideShowArrows(section, prevButton, nextButton, nextIndex)
+   } else {
+       /* upscroll here 
+       const currentSection = track.querySelector('.current-section');
+       const prevSection = currentSection.previousElementSibling;
+       const currentLink = navIndicator.querySelector('.current-section')
+       const prevLink = currentLink.previousElementSibling;
+       const prevIndex = section.findIndex(section => section === prevSection)
+
+       moveToSection(track, currentSection, prevSection);
+       updateIndicator(currentLink, prevLink);
+       hideShowArrows(section, prevButton, nextButton, prevIndex)
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false); */
+
+
 /*Active nav-links get styling*/
 const updateIndicator = (currentLink, targetLink) => {
     currentLink.classList.remove('current-section');
