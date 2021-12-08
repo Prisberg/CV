@@ -1,4 +1,6 @@
 .indicator-container {
+    display: flex;
+    flex-direction: column;
     max-width: 4rem;
 }
 
@@ -22,6 +24,7 @@
     max-width: 100%;
     margin: 0 auto;
 }
+
 /* div */
 .slide__section-seperator {
     /* temporary */
@@ -31,6 +34,7 @@
     position: relative;
     
 }
+
 /* ul */
 .section-track {
     padding: 0;
@@ -38,6 +42,7 @@
     list-style: none;
     transition: transform 250ms ease-in;
 }
+
 /* list item setting size for div */
 .slide-section {
     position: absolute;
@@ -45,12 +50,14 @@
     width: 100vw;
     max-width: 100%;
 }
+
 /* content container */
 .content {
     width:100%;
     height: 100%;
     z-index: 200;
 }
+
 /* test */
 .image {
     height: 100%;
@@ -59,23 +66,25 @@
 }
 
 /* position the buttons */
-.slide-button-up {
+.slide-buttons {
     position: fixed;
-    top: 20%;
-    z-index: 100;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0%;
+    width: 100%;
+}
+
+.slide-button-up {
 }
 
 .slide-button-down {
-    position: fixed;
-    bottom: 0%;
-    z-index: 100;
-    margin-left: 50%;
-    transform: translateX(-50%);
 }
 
  /*bootstrap icons*/
-.bi {font-size: 3rem;}
+.bi {
+    font-size: 3rem;
+    color: white;
+}
 
 .is-hidden {display: none;}

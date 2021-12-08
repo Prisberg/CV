@@ -35,9 +35,6 @@
     </nav>
     <!-- Vertical slide website layout -->
     <div class="slide">
-        <button type="button" class="btn slide-button-up is-hidden">
-            <span class="bi bi-caret-up-fill"></span>
-        </button>
         <!-- Seperates sections from buttons -->
         <div class="slide__section-seperator">
             <!-- contains "slide-section" which in turn contain "content" -->
@@ -47,10 +44,15 @@
                 <li class="slide-section"><div class="content"><img class="image" src="/images/test.jpg" alt="test"></div></li>
             </ul>
         </div>
-        <button type="button" class="btn slide-button-down">
-            <span class="bi bi-caret-down-fill"></span>
-        </button>
-    </div>
+        <div class="slide-buttons">    
+            <button type="button" class="btn slide-button-up is-hidden">
+                <span class="bi bi-caret-up-fill"></span>
+            </button>
+            <button type="button" class="btn slide-button-down">
+                <span class="bi bi-caret-down-fill"></span>
+            </button>
+        </div>    
+        </div>
     </div>
 
 </body>
