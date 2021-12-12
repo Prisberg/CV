@@ -60,37 +60,22 @@ nextButton.addEventListener('click', e => {
     hideShowArrows(section, prevButton, nextButton, nextIndex)
 })
 
-/* Experimental scrolljacking)
-var lastScrollTop = 0;
+/* Experimental scrolljacking */
+var lastScrollTop = scrollY;
 
-// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
-   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+
+window.addEventListener("scroll", function(){
+   const st = window.scrollY || document.documentElement.scrollTop;
    if (st > lastScrollTop){
-        /*downscroll code here 
-        const currentSection = track.querySelector('.current-section');
-        const nextSection = currentSection.nextElementSibling;
-        const currentLink = navIndicator.querySelector('.current-section')
-        const nextLink = currentLink.nextElementSibling;
-        const nextIndex = section.findIndex(section => section === nextSection)
-
-        moveToSection(track, currentSection, nextSection);
-        updateIndicator(currentLink, nextLink);
-        hideShowArrows(section, prevButton, nextButton, nextIndex)
+        /*downscroll code here */
+        console.log('downscrolled')
    } else {
-       /* upscroll here 
-       const currentSection = track.querySelector('.current-section');
-       const prevSection = currentSection.previousElementSibling;
-       const currentLink = navIndicator.querySelector('.current-section')
-       const prevLink = currentLink.previousElementSibling;
-       const prevIndex = section.findIndex(section => section === prevSection)
+       /* upscroll here */
 
-       moveToSection(track, currentSection, prevSection);
-       updateIndicator(currentLink, prevLink);
-       hideShowArrows(section, prevButton, nextButton, prevIndex)
+       console.log('upscrolled')
    }
    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false); */
+}, false);
 
 
 /*Active nav-links get styling*/
