@@ -4,8 +4,9 @@ const nextButton = document.querySelector('.slide-button-down');
 const prevButton = document.querySelector('.slide-button-up');
 const navIndicator = document.querySelector('.indicator-container');
 const indicator = Array.from(navIndicator.children);
+var moving = true
 
-/* för att functionen ska veta hur långt ner den ska scrolla */
+/* States how many pixels the height of a section is */
 const sectionHeight = section[0].getBoundingClientRect().height;
 
 const setSectionPosition = (section, index) => {
@@ -60,23 +61,16 @@ nextButton.addEventListener('click', e => {
     hideShowArrows(section, prevButton, nextButton, nextIndex)
 })
 
-/* Experimental scrolljacking */
-var lastScrollTop = scrollY;
-
-
-window.addEventListener("scroll", function(){
-   const st = window.scrollY || document.documentElement.scrollTop;
-   if (st > lastScrollTop){
-        /*downscroll code here */
-        console.log('downscrolled')
-   } else {
-       /* upscroll here */
-
-       console.log('upscrolled')
-   }
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
-
+/* Disable scrolling */
+function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollTop);
+        };
+}
 
 /*Active nav-links get styling*/
 const updateIndicator = (currentLink, targetLink) => {

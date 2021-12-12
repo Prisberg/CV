@@ -1,12 +1,18 @@
+/* hide scrollbar as it is disabled */
+body {
+    overflow: hidden;
+}
+
 .indicator-container {
     display: flex;
     flex-direction: column;
-    max-width: 4rem;
+    max-width: 25%;
 }
 
 /* nav link styling to indicate active section */
 .section-indicator {
-    text-decoration: none;
+    justify-self: right;
+    align-self: right;
     color: rgba(0, 0, 0, .7);
     font-size: 1.2rem;
 }
@@ -40,7 +46,7 @@
     padding: 0;
     margin:0;
     list-style: none;
-    transition: transform 250ms ease-in;
+    transition: transform 500ms ease-in;
 }
 
 /* list item setting size for div */
@@ -75,16 +81,12 @@
     width: 100%;
 }
 
-.slide-button-up {
-}
-
-.slide-button-down {
-}
-
  /*bootstrap icons*/
 .bi {
     font-size: 3rem;
     color: white;
 }
 
-.is-hidden {display: none;}
+.is-hidden {
+    visibility: hidden;
+}
