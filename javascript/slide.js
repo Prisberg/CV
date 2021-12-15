@@ -4,7 +4,21 @@ const nextButton = document.querySelector('.slide-button-down');
 const prevButton = document.querySelector('.slide-button-up');
 const navIndicator = document.querySelector('.indicator-container');
 const indicator = Array.from(navIndicator.children);
-var moving = true
+
+/* variables for bootstrap manipulation */
+const bootCarousel = document.querySelector('.carousel-inner');
+const carouselChildren = Array.from(bootCarousel.children);
+const carouselNext = document.querySelector('.carousel-control-next')
+const carouselPrev = document.querySelector('.carousel-control-prev')
+const first = carouselChildren[0]
+const last = carouselChildren[2]
+
+  const hideCarouselArrows = (carouselChildren, carouselPrev, carouselNext) => {
+    if (first.className === "carousel-item active") {
+        prevButton.classList.add('is-none')
+    }
+}
+
 
 /* States how many pixels the height of a section is */
 const sectionHeight = section[0].getBoundingClientRect().height;

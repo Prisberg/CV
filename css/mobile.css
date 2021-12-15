@@ -104,7 +104,7 @@ body {
 .content {
     width:100%;
     height: 100%;
-    z-index: 200;
+    max-height: 100vh;
 }
 
 /* test */
@@ -124,17 +124,30 @@ body {
     width: 100%;
 }
 
- /*bootstrap icons*/
-.bi {
+.bi-chevron-compact-down, .bi-chevron-compact-up, .bi-three-dots-vertical {
     font-size: 3rem;
-    color: white;
 }
 
+.bi-chevron-right, .bi-chevron-left {
+    font-size: 2rem;
+}
+
+/*bootstrap icons*/
+.bi {
+    color: black;
+    mix-blend-mode: multiply;
+}
+
+/* temp */
 .bi:active {
     color: red;
 }
 
-/* added to arrows when they are superfluous */
+/* added to arrows when they are unnecessary */
 .is-hidden {
     visibility: hidden;
+}
+
+.is-none {
+    display: none;
 }
