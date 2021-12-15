@@ -27,8 +27,8 @@
         </span>
         <div class="indicator-container" id="indicatorContainerID">
             <a class="dropdown-item section-indicator current-section">Start</button>
-            <a class="dropdown-item section-indicator">My CV</a>
-            <a class="dropdown-item section-indicator">Contact</a>
+                <a class="dropdown-item section-indicator">My CV</a>
+                <a class="dropdown-item section-indicator">Contact</a>
         </div>
 
     </nav>
@@ -43,7 +43,35 @@
                     <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
                 </li>
                 <li class="slide-section">
-                    <div class="content"><img class="image" src="/images/test2.jpg" alt="test2"></div>
+                    <div class="content">
+                        <!-- Bootstrap carousel on mobile -->
+                        <div id="carouselIndicatorsID" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                            <div class="carousel-indicators position-absolute top-0">
+                              <button type="button" data-bs-target="#carouselIndicatorsID" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselIndicatorsID" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselIndicatorsID" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="..." class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsID" data-bs-slide="prev">
+                              <span class="bi bi-chevron-left" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsID" data-bs-slide="next">
+                              <span class="bi bi-chevron-right" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
                 </li>
                 <li class="slide-section">
                     <div class="content"><img class="image" src="/images/test.jpg" alt="test"></div>
@@ -51,11 +79,11 @@
             </ul>
         </div>
         <div class="slide-buttons">
-            <button type="button" class="btn slide-button-up is-hidden">
-                <span class="bi bi-caret-up-fill"></span>
+            <button type="button" class="btn btn-sm slide-button-up is-hidden">
+                <span class="bi bi-chevron-compact-up"></span>
             </button>
-            <button type="button" class="btn slide-button-down">
-                <span class="bi bi-caret-down-fill"></span>
+            <button type="button" class="btn btn-sm slide-button-down">
+                <span class="bi bi-chevron-compact-down"></span>
             </button>
         </div>
     </div>
