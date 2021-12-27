@@ -4,24 +4,25 @@ const nextButton = document.querySelector('.slide-button-down');
 const prevButton = document.querySelector('.slide-button-up');
 const navIndicator = document.querySelector('.indicator-container');
 const indicator = Array.from(navIndicator.children);
+const sectionHeight = section[0].getBoundingClientRect().height;
 
-/* variables for bootstrap manipulation */
-const bootCarousel = document.querySelector('.carousel-inner');
-const carouselChildren = Array.from(bootCarousel.children);
-const carouselNext = document.querySelector('.carousel-control-next')
-const carouselPrev = document.querySelector('.carousel-control-prev')
-const first = carouselChildren[0]
-const last = carouselChildren[2]
+/* variables for bootstrap manipulation
+const carouselNext = document.querySelector('.carousel-control-next').addEventListener('click', bootHide)
+const carouselPrev = document.querySelector('.carousel-control-prev').addEventListener('click', bootHide)
 
-  const hideCarouselArrows = (carouselChildren, carouselPrev, carouselNext) => {
-    if (first.className === "carousel-item active") {
-        prevButton.classList.add('is-none')
+ line 15 and 16 work seperately but not together 
+function bootHide() {
+    const bootCarousel = document.querySelector('.carousel-inner');
+    const carouselChildren = Array.from(bootCarousel.children);
+    if (carouselChildren[0].className === 'carousel-item active') {
+        carouselPrev.classList.add('is-none')
+    } else {
+        carouselPrev.classList.remove('is-none')
     }
-}
+}*/
 
 
 /* States how many pixels the height of a section is */
-const sectionHeight = section[0].getBoundingClientRect().height;
 
 const setSectionPosition = (section, index) => {
     section.style.top = sectionHeight * index + 'px';
@@ -79,11 +80,11 @@ nextButton.addEventListener('click', e => {
 function disableScroll() {
     // Get the current page scroll position
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-        // if any scroll is attempted, set this to the previous value
-        window.onscroll = function() {
-            window.scrollTo(scrollTop);
-        };
+
+    // if any scroll is attempted, set this to the previous value
+    window.onscroll = function () {
+        window.scrollTo(scrollTop);
+    };
 }
 
 /*Active nav-links get styling*/
