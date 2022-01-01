@@ -6,21 +6,68 @@ const navIndicator = document.querySelector('.indicator-container');
 const indicator = Array.from(navIndicator.children);
 const sectionHeight = section[0].getBoundingClientRect().height;
 
-/* variables for bootstrap manipulation
-const carouselNext = document.querySelector('.carousel-control-next').addEventListener('click', bootHide)
-const carouselPrev = document.querySelector('.carousel-control-prev').addEventListener('click', bootHide)
+//variables for bootstrap manipulation
+const bootPrev = document.querySelector('.carousel-control-prev');
+const bootNext = document.querySelector('.carousel-control-next');
 
- line 15 and 16 work seperately but not together 
+bootPrev.addEventListener('click', e => {
+    setTimeout(function () {
+        if (bootNext.classList.contains('is-none')) {
+        bootNext.classList.remove('is-none');
+    }   else {
+        bootPrev.classList.add('is-none');
+    }
+    }, 600);
+})
+bootNext.addEventListener('click', e => {
+    setTimeout(function () {
+        if (bootPrev.classList.contains('is-none')) {
+        bootPrev.classList.remove('is-none');
+    }   else {
+        bootNext.classList.add('is-none');
+    }
+    }, 600);
+})
+/* 
+bootPrev.addEventListener('click', e => {
+    //non clickable after click code
+    if (!moving) {
+        setTimeout(bootHide, 625);
+    }
+})
+
+bootNext.addEventListener('click', e => {
+    //non clickable after click code
+    if (!moving) {
+        setTimeout(bootHide, 625);
+    }
+})
+//not working
+function disableInteraction() {
+    moving = true
+    const bootButtons = document.querySelectorAll('.boot-hide')
+    if (moving) {
+        bootNext.classList.add('pointer-event')
+        bootPrev.classList.add('pointer-event')
+    }
+    setTimeout(() => {
+        moving = false
+        bootNext.classList.remove('pointer-event')
+        bootPrev.classList.remove('pointer-event')
+    }, 2000);
+}
+
 function bootHide() {
     const bootCarousel = document.querySelector('.carousel-inner');
     const carouselChildren = Array.from(bootCarousel.children);
     if (carouselChildren[0].className === 'carousel-item active') {
-        carouselPrev.classList.add('is-none')
+        bootPrev.classList.add('is-none');
+    } else if (carouselChildren[carouselChildren.length - 1].className === 'carousel-item active') {
+        bootNext.classList.add('is-none');
     } else {
-        carouselPrev.classList.remove('is-none')
-    }
-}*/
-
+        bootNext.classList.remove('is-none');
+        bootPrev.classList.remove('is-none');
+    } */
 
 /* States how many pixels the height of a section is */
 
@@ -77,7 +124,7 @@ nextButton.addEventListener('click', e => {
 })
 
 /* Disable scrolling */
-function disableScroll() {
+window.addEventListener('load', (disableScroll) => {
     // Get the current page scroll position
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -85,7 +132,7 @@ function disableScroll() {
     window.onscroll = function () {
         window.scrollTo(scrollTop);
     };
-}
+})
 
 /*Active nav-links get styling*/
 const updateIndicator = (currentLink, targetLink) => {

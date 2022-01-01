@@ -17,12 +17,12 @@
     <title>Philip Risberg</title>
 </head>
 
-<body onload="disableScroll()">
+<body>
 
     <!-- Navbar -->
     <nav class="custom-nav" id="customNav">
         <a href="#" class="navbar-brand w-50"><img class="img-fluid" src="/images/logo.png" alt="logo"></a>
-        <span class="toggler-icon" onclick="navbar()">
+        <span class="toggler-icon" id="navbarToggle">
             <i class="bi bi-three-dots-vertical"></i>
         </span>
         <div class="indicator-container" id="indicatorContainerID">
@@ -62,7 +62,7 @@
                                 <img src="..." class="d-block w-100" alt="...">
                               </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsID" data-bs-slide="prev">
+                            <button class="carousel-control-prev is-none" type="button" data-bs-target="#carouselIndicatorsID" data-bs-slide="prev">
                               <span class="bi bi-chevron-left" aria-hidden="true"></span>
                               <span class="visually-hidden">Previous</span>
                             </button>

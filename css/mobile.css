@@ -151,3 +151,7 @@ body {
 .is-none {
     display: none;
 }
+
+.pointer-event {
+    pointer-events: none;
+}
