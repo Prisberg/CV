@@ -162,12 +162,12 @@ ul {
     inset: 0;
     opacity: 0;
     transition: 300ms opacity ease-in-out;
-    transition-delay: 200ms;
+    transition-delay: 400ms;
 }
 
 .carousel-section[data-active] {
     opacity: 1;
-    transition-delay: 300ms;
+    transition-delay: 500ms;
 }
 
 .carousel-button {
