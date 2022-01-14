@@ -1,15 +1,16 @@
-const indicatorDiv = document.getElementById("indicatorContainerID");
-/* makes mobile nav responsive */
-document.querySelector("#navbarToggle").addEventListener("click", function () {
-    if (indicatorDiv.className === "indicator-container") {
-        indicatorDiv.className += " responsive";
+const indicatorDiv = document.getElementById("indicatorContainer");
+
+/* mobile nav dropdown */
+document.getElementById('navbarToggle').addEventListener("click", () => {
+    if (indicatorDiv.className === "is-none") {
+        indicatorDiv.className = "flex";
     } else {
-        indicatorDiv.className = "indicator-container";
+        indicatorDiv.className = "is-none";
     }
 })
-/* closes dropdown nav if click happens outside nav */
-document.querySelector(".slide").addEventListener("click", function () {
-    if (indicatorDiv.className === "indicator-container responsive") {
-        indicatorDiv.className = "indicator-container";
+/* closes mobile nav if click happens outside nav */
+document.getElementById('layout').addEventListener("click", () => {
+    if (indicatorDiv.className === "flex") {
+        indicatorDiv.className = "is-none";
     }
 })

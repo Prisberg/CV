@@ -1,3 +1,10 @@
+*, *::before, *::after {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* ANIMATIONS */
 /* animate nav toggle */
 @keyframes dropdown {
     0% {
@@ -13,137 +20,35 @@
       opacity: 1;
       transform: rotateX(0deg);
     }
-  }
-
-/* hide scrollbar as it is disabled */
-body {
-    overflow: hidden;
 }
 
-/* Dropdown menu for mobile */
-.custom-nav {
-    position: fixed;
+/* REUSABLE CLASSES */
+.flex {
     display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    z-index: 2;
 }
 
-.indicator-container {
-    display: none;
-}
-
-.toggler-icon {
-    position: absolute;
-    right: 5%;
-}
-
-/* Show dropdown */
-.indicator-container.responsive {
-    display: flex;
+.center {
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    animation-name: dropdown;
-    transform-origin: top center;
-    animation-duration: 0.8s;
-    margin-top: 80px;
-    gap: 1rem;
 }
 
-/* nav link styling to indicate active section */
-.section-indicator {
-    color: rgba(0, 0, 0, .7);
-    font-size: 1.2rem;
-    user-select: none;
-}
-
-.section-indicator:hover {
+.buttons {
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
-/* the section-indicator with this class indicates which section is being viewed.*/ 
-.section-indicator.current-section {
-    background: rgba(255, 0, 0, 0.75);
-}
-
-/* website layout container */
-.slide {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* slide div */
-.slide__section-seperator {
-    /* temporary */
-    background: lightgreen ;
-    /* necessary */
-    height: 100%;
-    position: relative;
-    
-}
-
-/* slide ul */
-.section-track {
-    padding: 0;
-    margin:0;
-    list-style: none;
-    transition: transform 500ms ease-in;
-}
-
-/* list item setting size for div */
-.slide-section {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-}
-
-/* content container */
-.content {
-    width:100%;
-    height: 100%;
-    max-height: 100vh;
-}
-
-/* test */
-.image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* position the buttons */
-.slide-buttons {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0%;
-    width: 100%;
-}
-
-.bi-chevron-compact-down, .bi-chevron-compact-up, .bi-three-dots-vertical {
-    font-size: 3rem;
-}
-
-.bi-chevron-right, .bi-chevron-left {
-    font-size: 2rem;
-}
-
-/*bootstrap icons*/
-.bi {
-    color: black;
-    mix-blend-mode: multiply;
+.fas {
+    color: rgb(200, 200, 200);
+    font-size: 4rem;
 }
 
 /* temp */
-.bi:active {
-    color: red;
+.fas:active {
+    color: rgb(144, 138, 138);
 }
 
-/* added to arrows when they are unnecessary */
 .is-hidden {
     visibility: hidden;
 }
@@ -152,6 +57,165 @@ body {
     display: none;
 }
 
-.pointer-event {
-    pointer-events: none;
+/* SPECIFIC STYLING */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow:hidden;
+}
+
+nav {
+    position: fixed;
+    right: 0%;
+    z-index: 3;
+}
+
+#navbarToggle {
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+}
+
+#indicatorContainer {
+    flex-direction: column;
+    animation-name: dropdown;
+    transform-origin: top center;
+    animation-duration: 0.8s;
+    margin-top: 6rem;
+}
+
+.indicator {
+    color:rgb(200, 200, 200);
+    font-size: 2rem;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.active {
+    /* temp */
+    background: #333;
+    color: rgb(153, 153, 153);
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+}
+
+#layout {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+}
+
+.layout-section {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    /* temp */
+    background-color: orange;
+}
+
+.layout-button-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 0%;
+    width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+    
+.carousel-section {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.carousel-section[data-active] {
+    opacity: 1;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    top: 150%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+#start > div {
+    width: 100%;
+    height: 80%;
+}
+
+.image {
+    width: 75%;
+    height: 75%;
+    object-fit: scale-down;
+}
+
+#about {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-bar {
+    width: 95%;
+    height: 2rem;
+    background-color: #333;
+    border-radius: 1rem;
+}
+
+.progress-bar > div {
+    border-radius: 1rem;
+    height: 100%;
+    background-color: green;
+}
+
+.html5 {
+    width: 80%;
+}
+.css3 {
+    width: 60%;
+}
+.ux {
+    width: 70%;
+}
+.javascript {
+    width: 45%;
+}
+.photoshop {
+    width: 78%;
+}
+.m-office {
+    width: 70%;
+}
+
+.tablet-nav {
+    display: none;
 }
