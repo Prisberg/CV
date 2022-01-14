@@ -9,8 +9,10 @@ window.onload = function () {
         indicators[0].className = 'indicator active';
     } else if (window.location.href.includes('#myCV')) {
         indicators[1].className = 'indicator active';
-    } else {
+    } else if (window.location.href.includes('#contact')) {
         indicators[2].className = 'indicator active';
+    } else {
+        indicators[0].className = 'indicator active';
     }
 
     hideShow();

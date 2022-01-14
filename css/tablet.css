@@ -1,15 +1,20 @@
 @media only screen and (min-width: 600px) {
     
-    .mobile-nav {
-        display: none;
-    }
-
-    .tablet-nav {
+    .tablet {
         display: block;
     }
 
-    .test {
-        tar
+    #indicatorContainer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0%;
     }
 
+    .indicator {
+        padding: 0rem 2rem;
+    }
+
+    #navbarToggle {
+        display: none;
+    }
 }

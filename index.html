@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@300&family=Nunito:wght@200&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/mobile.css">
     <link rel="stylesheet" href="./css/tablet.css">
+
     <script defer src="./javascript/layout.js"></script>
     <script defer src="./javascript/nav.js"></script>
     <script defer src="./javascript/carousel.js"></script>
@@ -31,11 +39,11 @@
     <ul id="layout">
         <!-- Welcome section -->
         <li class="layout-section center" id="start">
-            <div class="flex center">
+            <div class=" content-div center">
                 <h1>Front End Developer</h1>
                 <h1>Philip Risberg</h1>
                 <img class="image" src="./images/me.png" alt="This is me">
-                <p>Welcome to my CV.</p>
+                <h2>Welcome to my CV.</h2>
             </div>
         </li>
         <!-- About and carousel section -->
@@ -47,7 +55,7 @@
             <div class="carousel-container">
                 <ul id="carousel">
                     <li class="carousel-section center" data-active>
-                        <div id="about" class="center">
+                        <div class="content-div">
                             <h2>About:</h2>
                             <p>Born: 1997-07-17.</p>
                             <p>Birthplace: Höör, Scania.</p>
@@ -79,8 +87,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="carousel-section">
-                        <div>
+                    <li class="carousel-section center">
+                        <div class="content-div content-text">
                             <h2>Dear future employer,</h2>
                             <p>
                                 I am a student at Medieinstitutet in Gothenburg where I am studying to
@@ -93,13 +101,25 @@
                                 At the moment of writing this cover letter my experience as a Front End
                                 Developer is limited. This far into my education I have completed
                                 assignments in Html5, CSS3 and JavaScript. Besides these I have also
-                                completed a course on UX design. What I would love now is some hands-on
-                                experience in the actual working life of a web developer.
+                                completed a course on UX design.
+                            </p>
+                            <p class="tablet">
+                                As a person I am calm, curious and friendly. My interest lies in anything
+                                tech related, creative, challenging and adventurous. Examples include
+                                strength training, drawing and some amateur level photography.
+                            </p>
+                            <p class="tablet">
+                                If you would like to find out more about me or get in contact all my
+                                relevant links are in the next section below.
                             </p>
                         </div>
                     </li>
-                    <li class="carousel-section">
-                        <div>
+                    <li class="carousel-section center">
+                        <div class="content-div content-text">
+                            <p>
+                                What I would love now is some hands-on
+                                experience in the actual working life of a web developer.
+                            </p>
                             <p>
                                 As a person I am calm, curious and friendly. My interest lies in anything
                                 tech related, creative, challenging and adventurous. Examples include
@@ -116,16 +136,22 @@
         </li>
         <!-- Contact section -->
         <li class="layout-section center" id="contact">
-            <p>Thank you for checking out my resume, I look forward to hearing from you.</p>
-            <p>Best regards,</p>
-            <p>Philip Risberg</p>
-            <h2>Contact information:</h2>
-            <p>Email: fille.risberg@live.se</p>
-            <p>Number: 0733805263</p>
-            <h2>Links:</h2>
-            <div>
-                <a href="https://github.com/Prisberg"><i class="fab fa-github-square"></i></a>
-                <a href="https://www.instagram.com/mr.risberg/"><i class="fab fa-instagram-square"></i></a>
+            <div class="content-div content-text center">
+                <div class="content-text">
+                    <h2>Thank you.. </h2>
+                    <p>
+                        for checking out my resume, I look forward to hearing from you.</p>
+                    <p>Best regards,</p>
+                    <p>Philip Risberg</p>
+                </div>
+                <h2>Contact information:</h2>
+                <p>Email: fille.risberg@live.se</p>
+                <p>Phone number: 0733805263</p>
+                <h2>Links:</h2>
+                <div>
+                    <a href="https://github.com/Prisberg"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.instagram.com/mr.risberg/"><i class="fab fa-instagram-square"></i></a>
+                </div>
             </div>
         </li>
     </ul>
