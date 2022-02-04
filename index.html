@@ -16,6 +16,7 @@
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/mobile.css">
     <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./css/desktop.css">
 
     <script defer src="./javascript/layout.js"></script>
     <script defer src="./javascript/nav.js"></script>
@@ -39,7 +40,7 @@
     <ul id="layout">
         <!-- Welcome section -->
         <li class="layout-section center" id="start">
-            <div class=" content-div center">
+            <div class="content-div center">
                 <h1>Front End Developer</h1>
                 <h1>Philip Risberg</h1>
                 <img class="image" src="./images/me.png" alt="This is me">
@@ -47,14 +48,15 @@
             </div>
         </li>
         <!-- About and carousel section -->
-        <li class="layout-section" id="myCV">
-            <button type="button" id="prev" class="buttons carousel-button is-hidden"><span
-                    class="fas fa-chevron-left"></span></button>
-            <button type="button" id="next" class="buttons carousel-button"><span
-                    class="fas fa-chevron-right"></span></button>
-            <div class="carousel-container">
+        <li class="layout-section center" id="myCV">
+            <div id="mobile-about" class="carousel-container">
+                <button type="button" id="prev" class="buttons carousel-button is-hidden"><span
+                        class="fas fa-chevron-left"></span></button>
+                <button type="button" id="next" class="buttons carousel-button"><span
+                        class="fas fa-chevron-right"></span></button>
                 <ul id="carousel">
-                    <li class="carousel-section center" data-active>
+                    <li class="carousel-section center" data-active>¨
+                        <!-- Mobile -->
                         <div class="content-div">
                             <h2>About:</h2>
                             <p>Born: 1997-07-17.</p>
@@ -124,7 +126,73 @@
                     </li>
                 </ul>
             </div>
+            <!-- Desktop -->
+            <div id="desktop-about" class="content-div">
+                <div id="item1">
+                    <h2>About:</h2>
+                    <p>Born: 1997-07-17.</p>
+                    <p>Birthplace: Höör, Scania.</p>
+                    <p>Gender: Male.</p>
+
+                    <h2>Skillsets:</h2>
+                    <p>Html5</p>
+                    <div class="progress-bar">
+                        <div class="html5"></div>
+                    </div>
+                    <p>CSS3</p>
+                    <div class="progress-bar">
+                        <div class="css3"></div>
+                    </div>
+                    <p>Ux design</p>
+                    <div class="progress-bar">
+                        <div class="ux"> </div>
+                    </div>
+                    <p>JavaScript</p>
+                    <div class="progress-bar">
+                        <div class="javascript"></div>
+                    </div>
+                    <p>Photoshop</p>
+                    <div class="progress-bar">
+                        <div class="photoshop"></div>
+                    </div>
+                    <p>Microsoft 365 office</p>
+                    <div class="progress-bar">
+                        <div class="m-office"></div>
+                    </div>
+                </div>
+
+                <div id="item2">
+                    <h2>Dear future employer,</h2>
+                    <p>
+                        I am a student at Medieinstitutet in Gothenburg where I am studying to
+                        become a Front End Developer. My long term goal is to make a living doing
+                        what I love, which is to be creative. I am very motivated by challenging
+                        myself and taking on responsibilities, which is in large part why I moved to
+                        Gothenburg from Scania for this education.
+                    </p>
+                    <p>
+                        At the moment of writing this cover letter my experience as a Front End
+                        Developer is limited. This far into my education I have completed
+                        assignments in Html5, CSS3 and JavaScript. Besides these I have also
+                        completed a course on UX design.
+                    </p>
+                    <p>
+                        What I would love now is some hands-on
+                        experience in the actual working life of a web developer.
+                    </p>
+                    <p>
+                        As a person I am calm, curious and friendly. My interest lies in anything
+                        tech related, creative, challenging and adventurous. Examples include
+                        strength training, drawing and some amateur level photography.
+                    </p>
+                    <p>
+                        If you would like to find out more about me or get in contact all my
+                        relevant links are in the next section below.
+                    </p>
+                </div>
+            </div>
         </li>
+
         <!-- Contact section -->
         <li class="layout-section center" id="contact">
             <div class="content-div content-text center">

@@ -1,0 +1,33 @@
+@media only screen and (min-width: 1200px) {
+
+    #desktop-about {
+        display: flex;
+        flex-direction: row;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .content-div {
+        height: 85%;
+    }
+
+    #item1 {
+        margin: 1rem;
+        width: 50%;
+    }
+
+    #item2 {
+        margin-top: 10%;
+        margin-right: 3rem;
+    }
+}

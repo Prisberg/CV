@@ -13,4 +13,8 @@
     #navbarToggle {
         display: none;
     }
+
+    #mobile-about {
+        display: none;
+    }
 }
