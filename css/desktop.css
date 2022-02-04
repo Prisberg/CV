@@ -5,9 +5,9 @@
         flex-direction: row;
     }
 
-    p {
+/*     p {
         font-size: 1.6rem;
-    }
+    } */
 
     h1 {
         font-size: 3rem;
@@ -22,12 +22,11 @@
     }
 
     #item1 {
-        margin: 1rem;
         width: 50%;
     }
 
-    #item2 {
-        margin-top: 10%;
-        margin-right: 3rem;
+    .progress-bar {
+        height: 1.4rem;
+        width: 80%;
     }
 }
