@@ -11,6 +11,10 @@
         display: none;
     }
 
+    .fas {
+        font-size: 6rem;
+    }
+
     h1 {
         font-size: 3rem;
     }
