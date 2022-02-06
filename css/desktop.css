@@ -10,7 +10,7 @@
     #mobile-about {
         display: none;
     }
-
+/* doesnt work on github pages? */
     .fas {
         font-size: 6rem;
     }
