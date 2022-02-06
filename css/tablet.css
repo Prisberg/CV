@@ -15,6 +15,17 @@
     }
 
     #mobile-about {
-        display: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    #tablet {
+        display: block;
+    }
+}
+
+@media only screen and (max-height: 880px) {
+    p {
+        font-size: 1rem;
     }
 }
