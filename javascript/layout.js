@@ -5,6 +5,8 @@ const indicators = document.querySelectorAll('.indicator')
 
 //call function hideshow onload
 window.onload = function () {
+    alert("This is an outdated CV, see the new one at https://prisberg.github.io/CVv2/");
+    
     if (window.location.href.includes('#start')) {
         indicators[0].className = 'indicator active';
     } else if (window.location.href.includes('#myCV')) {
